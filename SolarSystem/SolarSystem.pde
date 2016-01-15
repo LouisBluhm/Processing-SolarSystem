@@ -14,8 +14,12 @@ void draw() {
   
   earth.orbit();
   earth.display();
+  earth.moon(7, 2, 2);
+  
+  
   mars.orbit();
   mars.display();
+  mars.moon(5, 3, 5);
   
   //r = 10;
   //a += velocity * 5 * delta;
