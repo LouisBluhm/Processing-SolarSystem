@@ -14,15 +14,15 @@ void draw() {
   fill(255, 255, 170);
   
   sun();
-  
+ 
   planet1.orbit();
   planet1.display();
   planet1.moon(7, 2, 2);
-  
+    
   planet2.orbit();
   planet2.display();
-  planet2.moon(5, 3, 5);
-  
+  planet2.moon(10, 3, 5);
+    
   planet3.orbit();
   planet3.display();
  
