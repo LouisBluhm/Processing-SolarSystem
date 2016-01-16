@@ -8,10 +8,9 @@ class Planet {
   float planetX, planetY;
   float moonX, moonY;
   float d;
-  int num;
   color c;
   
-  Planet(float r, float x_orbit, float y_orbit, float v, float diameter, color planetColor, int planetNum) {
+  Planet(float r, float x_orbit, float y_orbit, float v, float diameter, color planetColor) {
     
     radius = r;
     x = x_orbit;
@@ -19,7 +18,6 @@ class Planet {
     velocity = v;
     d = diameter;
     c = planetColor;
-    num = planetNum;
     
   }
   
@@ -37,9 +35,15 @@ class Planet {
       moonX = planetX+x + moonRadius * cos(b);
       moonY = planetY+y + moonRadius * sin(b);
       ellipse(moonX, moonY, moonDiameter, moonDiameter);
-      textSize(7);
-      text("moon", moonX, moonY);
       
+    }
+    
+    void info(String planetNamePosition, String moonNamePosition) {
+      textSize(12);
+      fill(255);
+      text(planetNamePosition, planetX + 5, planetY + 10);
+      textSize(7);
+      text(moonNamePosition, moonX, moonY);
     }
     
     void display() {
@@ -47,8 +51,6 @@ class Planet {
       fill(c);
       ellipseMode(CENTER);
       ellipse(planetX, planetY, d, d);
-      textSize(12);
-      text("planet" + num, planetX + 10, planetY + 10);
       
       //debugging
       stroke(255);
