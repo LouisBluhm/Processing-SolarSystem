@@ -29,7 +29,7 @@ void draw() {
     
   planet3.orbit();
   planet3.display();
- 
+
 }
 
 void sun() {
