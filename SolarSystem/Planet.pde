@@ -60,6 +60,12 @@ class Planet {
       
     }
     
+    void stats() {
+      
+
+      
+    }
+    
 
 
 }

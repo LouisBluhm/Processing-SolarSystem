@@ -62,18 +62,24 @@ void draw() {
   neptune.info(planetName[7], moonName[6]);
   
   info();
+  button(0, -330, "Pause", 40);
+  button(50, -330, "Simple", 42);
+  button(102, -330, "Detailed", 50);
+}
+
+void button(float x, float y, String text, float textLength) {
+  fill(50, 50, 255);
+  rect(x-5, y+5, textLength, -15);
+  fill(255);
+  text(text, x, y); 
 }
 
 void sun() {
-  
   fill(255, 255, 190);
   ellipse(0, 0, 50, 50);
-  
 }
 
 void info() {
-  
   textSize(10);
-  text("Not all distances, orbital speeds, sizes etc. correct", -330, -330);
-  
+  text("Not all distances, orbital speeds, sizes etc. correct", -330, -330); 
 }
